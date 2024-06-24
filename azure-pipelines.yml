@@ -28,10 +28,9 @@ stages:
     pool:
       vmImage: $(vmImageName)
     steps:
-    - 
-- task: Docker@2
-  inputs:
-    containerRegistry: 'CDPipeline'
-    repository: 'kollurusrinivas/project-ncpl'
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'CDPipeline'
+        repository: 'kollurusrinivas/project-ncpl'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
